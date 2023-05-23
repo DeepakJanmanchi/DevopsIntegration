@@ -1,34 +1,7 @@
-# name: SonarActionGetWorkflow
-# on: 
-#   workflow_dispatch:
-
-# jobs:
-#   build:
-#     name: Build
-#     runs-on: ubuntu-latest
-#     steps:
-    
-#       - name: ServiceNow DevOps Sonar Scan Results
-#         uses: ServiceNow/servicenow-devops-sonar@scratch_STRY55387793
-#         with:
-#           devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
-#           devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWORD }}
-#           devops-integration-token: ${{ secrets.SN_DEVOPS_SECRET }}
-#           instance-url: ${{ secrets.SN_INSTANCE_URL }}
-#           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
-#           context-github: ${{ toJSON(github) }}
-#           job-name: 'Build'
-#           sonar-host-url: ${{ secrets.SONAR_URL }}
-#           sonar-project-key: ${{ secrets.SONAR_PROJECT_KEY }}
-          
-
-name: DeepakSonar
+name: DeepakDemo
     
 on:
-#   push:
-#     branches: ['master']
-#   pull_request:
-#     branches: ['master']
+
   workflow_dispatch:
 
 jobs:
@@ -67,7 +40,7 @@ jobs:
         uses: DeepakJanmanchi/servicenow-devops-sonar@main
         with:
           devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
-#           devops-integration-token: ${{ secrets.SN_DEVOPS_SECRET }}
+          devops-integration-token: ${{ secrets.SN_DEVOPS_SECRET }}
           devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWORD }}
           instance-url: ${{ secrets.SN_INSTANCE_URL }}
           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
