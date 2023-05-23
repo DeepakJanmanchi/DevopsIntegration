@@ -77,7 +77,7 @@ jobs:
             SONAR_URL: ${{ secrets.SONAR_URL }}
             
       - name: ServiceNow DevOps Sonar Scan Results
-        uses: ServiceNow/servicenow-devops-sonar@scratch_STRY55387793
+        uses: DeepakJanmanchi/servicenow-devops-sonar@main
         with:
           devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
           devops-integration-token: ${{ secrets.SN_DEVOPS_SECRET }}
