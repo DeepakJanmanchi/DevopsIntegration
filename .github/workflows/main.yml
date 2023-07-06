@@ -37,7 +37,7 @@ jobs:
             SONAR_ORG_KEY: ${{ secrets.SONAR_ORG }}
             
       - name: ServiceNow DevOps Sonar Scan Results
-        uses: ServiceNow/servicenow-devops-sonar@scratch_STRY55387793
+        uses: ServiceNow/servicenow-devops-sonar@main
         with:
           devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
           devops-integration-token: ${{ secrets.SN_DEVOPS_SECRET }}
@@ -53,7 +53,7 @@ jobs:
         run: mvn test -Dmaven.test.failure.ignore=true surefire-report:report
         
       - name: ServiceNow Test Action Report
-        uses: ServiceNow/servicenow-devops-test-report@scratch_STRY55387820
+        uses: ServiceNow/servicenow-devops-test-report@main
         with:
 #           devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
 #           devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWORD }}
